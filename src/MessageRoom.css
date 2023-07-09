@@ -1,0 +1,140 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+.message-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  width: 100%;
+  height: calc(100% - 35px);
+  background-color: rgb(18, 18, 18);
+  overflow-y: scroll;
+  justify-content: space-between;
+}
+.message-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 100vw;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  padding: 0 20px;
+  z-index: 1000;
+  background-color: rgb(37, 37, 37);
+}
+.message-form .text-input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1rem;
+  background: rgb(37, 37, 37);
+  outline: none;
+  padding: 0 10px;
+  outline: none;
+  border: 0ch;
+  color: #fff;
+}
+.send-button {
+  outline: none;
+  background-color: rgba(122, 225, 206, 0.478);
+  border: 0;
+  border-radius: 50%;
+  height: calc(100% - 4px);
+  width: 2.5rem;
+  color: rgb(255, 255, 255);
+  margin: 3px 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  display: grid; 
+  grid-template-columns: 60px auto; 
+  grid-template-rows: 1fr; 
+  gap: 0px 12px; 
+  grid-template-areas: 
+    "Image details"; 
+  width: auto;
+  height: auto;
+  max-width: 70vw;
+  margin: 5px;
+}
+.image { 
+  padding: 5px 0;
+  grid-area: Image; 
+  width: 60px;
+  border-radius: 50%;
+  
+}
+.details { 
+  padding: 7.5px 7.5px;
+  grid-area: details; 
+  background-color:rgba(246, 246, 246, 0.081);
+  border-radius: 13px;
+  margin: 4px 0;
+  width: max-content;
+  max-width: 60vw;
+  text-align: start;
+  unicode-bidi: plaintext;
+}
+
+.name{
+  color: #fc4f5a;
+  font-size: 16px;
+  margin: 3px 0 7px;
+  font-weight: 600;
+  width: max-content;
+  min-width: 100%;
+}
+.txt{
+  margin: 4px 0;
+  color: white;
+  overflow-wrap: break-word;
+  unicode-bidi: plaintext;
+}
+.date{
+  color: rgba(255, 255, 255, 0.65);
+  text-align: right;
+}
+.photo {
+  max-width: 100%;
+  max-height: 400px; /* Ubah tinggi gambar sesuai kebutuhan */
+  object-fit: cover;
+
+}
+.sent.message{
+justify-content: end;  
+grid-template-columns: auto;
+grid-template-areas: "details"; 
+align-self: end;
+}
+.sent .details{
+  background-color: #70DEE526;
+}
+.sent .name{
+  display: none;
+}
+.sent .image{
+  display: none;
+}
+
+.send-button img {
+  width: 20px;
+}
+
+@media (max-width: 800px) {
+  .message-form .send-button {
+    margin: 1px;
+  }
+  .message {
+  display: grid; 
+  grid-template-columns: 40px auto; 
+}
+  .image { 
+    width: 40px;
+  }
+}
