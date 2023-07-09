@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Gabut rooms",
+  "name": "it's a (very) basic chat website with a singular chat room, please don't use profanity in the chat 😥",
   "icons": [
     {
       "src": "favicon.ico",
